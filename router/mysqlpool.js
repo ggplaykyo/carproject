@@ -89,7 +89,7 @@ router.post('/loginuser', function (req, res) {
                 console.log('로그인 실패');
             } else {
                 console.log('로그인 성공');
-                res.json(results);
+                res.redirect('/');
             }
 
         });
