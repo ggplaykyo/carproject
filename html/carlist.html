@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>프로젝트 페이지</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" type="text/css" rel="stylesheet" media="screen">
+
+    <!-- Custom styles for this template -->
+    <link href="justified-nav.css" rel="stylesheet">
+    <!-- <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.min.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function(){
+        $.ajax({
+            type :"get",
+            url : "/api/carlist",
+            success : function(a){
+                console.log(a);
+                a.carlist
+                $.each(a.carlist,(i,item)=>{
+                    $('#carlist').append("<li>"+"모델: "+item.model +"\t제조사: "+item.company+"\t차주: "+item.owner +"\t차량번호: "+item.carNumber+"\t사고횟수: "+item.numOfAccident+"\t차주변경횟수: "+item.numOfOwnerChange+"</li>");
+
+                })
+            }
+        })
+    })
+
+    </script>
+</head>
+
+<body>
+    <div class="masthead">
+        <nav>
+          <ul class="nav nav-justified">
+            <li class="active"><img src="/img/logo.png" href="#" alt="logo" width="100" height="80" ></li> 
+            <li><a href="/regcarform">차량 등록</a></li>
+            <li><a href="/carlist">차량 조회/삭제</a></li>
+            <%if(!locals.user.email){%>
+            <li><a href="/loginform">로그인</a></li>
+            <li><a href="/registerform">회원가입</a></li>
+            <%}else{%>
+            <li><a href="/profileform">마이페이지</a></li>
+            <li><a href="/logout">로그아웃</a></li>
+            <%}%>
+          </ul>
+        </nav>
+
+      </div>
+
+      <ul id="carlist">
+
+      </ul>
+
+</body>
+
+</html>

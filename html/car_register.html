@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">   
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>프로젝트 페이지</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" type="text/css" rel="stylesheet" media="screen">
+
+    <!-- Custom styles for this template -->
+    <link href="justified-nav.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="masthead">
+        <nav>
+          <ul class="nav nav-justified">
+            <li class="active"><img src="/img/logo.png" href="#" alt="logo" width="100" height="80" ></li> 
+            <li><a href="/regcarform">차량 등록</a></li>
+            <li><a href="/carlist">차량 조회/삭제</a></li>
+            <%if(!locals.user.email){%>
+            <li><a href="/loginform">로그인</a></li>
+            <li><a href="/registerform">회원가입</a></li>
+            <%}else{%>
+            <li><a href="/profileform">마이페이지</a></li>
+            <li><a href="/logout">로그아웃</a></li>
+            <%}%>
+          </ul>
+        </nav>
+      </div>
+      <div class="card-body">
+        <h4 class="card-title">차량 등록</h4>
+        <form action="/regcar" method="get">
+            <div class="form-group">
+                <label for="name">차종</label>
+                <input id="name" type="text" class="form-control" name="model" autofocus>
+            </div>
+
+            <div class="form-group">
+                <label for="email">제조사</label>
+                <input id="email" type="text" class="form-control" name="company" >
+            </div>
+
+            <div class="form-group">
+                <label for="password">차주</label>
+                <input type="text" class="form-control" name="owner" >
+            </div>
+
+            <div class="form-group">
+                <label for="password">차량번호</label>
+                <input type="text" class="form-control" name="carNumber" >
+            </div>
+
+            <div class="form-group">
+                <label for="password">사고횟수</label>
+                <input type="text" class="form-control" name="numOfAccident" >
+            </div>
+
+            <div class="form-group">
+                <label for="password">차주변경횟수</label>
+                <input type="text" class="form-control" name="numOfOwnerChange" >
+            </div>
+
+            <div class="form-group m-0">
+                <button type="submit" class="btn btn-primary btn-block">
+                    등록
+                </button>
+            </div>
+        </form>
+    
+    </div>
+
+</body>
+
+</html>

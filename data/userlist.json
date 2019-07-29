@@ -1,0 +1,27 @@
+{
+        "1@naver.com": {
+                "password": "123",
+                "name": "1",
+                "email": "1@naver.com"
+        },
+        "2@naver.com": {
+                "password": "123",
+                "name": "2",
+                "email": "2@naver.com"
+        },
+        "3@naver.com": {
+                "name": "3",
+                "email": "3@naver.com",
+                "password": "123"
+        },
+        "4@naver.com": {
+                "name": "4",
+                "email": "4@naver.com",
+                "password": "123"
+        },
+        "5@naver.com": {
+                "name": "5",
+                "email": "5@naver.com",
+                "password": "123"
+        }
+}

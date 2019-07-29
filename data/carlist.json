@@ -1,0 +1,50 @@
+[
+        {
+                "model": "아반떼",
+                "company": "기아",
+                "numOfAccident": "5",
+                "owner": "민준희",
+                "numOfOwnerChange": "1",
+                "carNumber": "1500"
+        },
+        {
+                "model": "에꾸스",
+                "company": "현대",
+                "numOfAccident": "4",
+                "owner": "고희모",
+                "numOfOwnerChange": "0",
+                "carNumber": "1767"
+        },
+        {
+                "model": "모닝",
+                "company": "기아",
+                "numOfAccident": "2",
+                "owner": "민기하",
+                "numOfOwnerChange": "1",
+                "carNumber": "5542"
+        },
+        {
+                "model": "벤츠",
+                "company": "포드",
+                "numOfAccident": "5",
+                "owner": "연철수",
+                "numOfOwnerChange": "2",
+                "carNumber": "2100"
+        },
+        {
+                "model": "아반떼",
+                "company": "현대",
+                "numOfAccident": "3",
+                "owner": "고희준",
+                "numOfOwnerChange": "3",
+                "carNumber": "1138"
+        },
+        {
+                "model": "a",
+                "company": "b",
+                "owner": "c",
+                "carNumber": "123",
+                "numOfAccident": "12",
+                "numOfOwnerChange": "12"
+        }
+]
